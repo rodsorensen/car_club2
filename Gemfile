@@ -5,6 +5,8 @@ gem 'rails', '4.0.3'
 
 group :production do
   gem 'pg'
+  gem 'rails_12factor'
+  gem 'thin'
 end
 
 gem 'carrierwave'
