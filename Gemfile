@@ -3,10 +3,31 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.3'
 
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+group :production do
+  gem 'pg'
+end
+
+gem 'carrierwave'
+#gem 'rmagick'
+#gem ''
+#gem ''
+
+group :development do
+  gem 'better_errors'
+  #gem 'binding_of_caller'
+  gem 'quiet_assets'
+  gem 'pry-rails'
+end
 
 gem 'devise'
+
+group :test, :development do
+  # Use sqlite3 as the database for Active Record
+  gem 'sqlite3'
+  gem 'rspec-rails'
+  gem 'capybara-rails'
+end
+
 gem "twitter-bootstrap-rails"
 
 # Use SCSS for stylesheets
